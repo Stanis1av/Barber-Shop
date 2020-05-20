@@ -1,7 +1,9 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sqlite3'
 
+db = SQLite3::Database.new 'test.sqlite'
 
 get '/' do
   erb :home
