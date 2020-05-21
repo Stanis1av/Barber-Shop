@@ -5,6 +5,10 @@ require 'sqlite3'
 
 db = SQLite3::Database.new 'test.sqlite'
 
+db.execute "INSERT INTO cars (Name, Price) VALUES ('Vaz', 200)"
+
+db.close
+
 get '/' do
   erb :home
 end
