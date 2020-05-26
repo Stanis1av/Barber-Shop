@@ -15,17 +15,15 @@
 
   <div class="form-group">
     <label>Когда вас ждать?</label>
-    <input id="datetimepicker" name="datetime" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @datetime %>">
+      <div class='input-group date' id='datetimepicker1'>
+          <input name="datetime" type='text' class="form-control" />
+          <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
   </div>
 
-  <div class="form-group">
-     <label>ваш парикмахер</label>
-      <select name="hairdresser" class="custom-select">
-        <option <%= @hairdresser == 'Walter White' ? 'selected' : '' %>>Walter White</option>
-        <option <%= @hairdresser == 'Jessie Pinkman' ? 'selected' : '' %>>Jessie Pinkman</option>
-        <option <%= @hairdresser == 'Gus Fring' ? 'selected' : '' %>>Gus Fring</option>
-      </select>
-  </div>
+
   <br/>
   <br/>
 
@@ -55,7 +53,7 @@
 $(function() {
 
   $('#color').simplecolorpicker();
-  $('#datetimepicker').datetimepicker();
+  $('#datetimepicker1').datetimepicker();
 });
 
 </script>
